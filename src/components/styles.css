@@ -1,0 +1,13 @@
+.spcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.newThought {
+  background-color: #03a9f4;
+  height: 45px;
+  color: white;
+  font-size: larger;
+  width: 70%;
+}
