@@ -9,6 +9,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 100vh;
+  width: 100vw;
 }
 .newThought {
   background-color: #03a9f4;
@@ -39,8 +41,40 @@ h1 {
 
 .PostForm {
   display: flex;
-  justify-content: center;
+
+  position: absolute;
+  background-color: #79c5e8;
+  border-radius: 5px;
+  width: 50%;
+  box-shadow: 0 0px 6px 2px black;
+}
+
+form {
+  margin: auto;
+  width: 90%;
 }
 p {
   margin-left: 20px;
+}
+.hidden {
+  display: none;
+}
+
+#title {
+  width: 100%;
+  border: 1px solid black;
+  box-shadow: 0 0px 6px 2px black;
+}
+
+#thought {
+  width: 100%;
+  border: 1px solid black;
+  box-shadow: 0 0px 6px 2px black;
+}
+
+.trashCan {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4%;
 }

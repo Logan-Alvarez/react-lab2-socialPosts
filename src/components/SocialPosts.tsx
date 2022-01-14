@@ -27,8 +27,9 @@ function SocialPosts() {
         {posts.map((post, i) => (
           <PostInList key={i} post={post} />
         ))}
-        {hidden ? <PostForm onSubmit={handlePostFormSubmit} /> : null}
       </div>
+      <div className="opacityDiv"></div>
+      {hidden ? <PostForm onSubmit={handlePostFormSubmit} /> : null}
     </div>
   );
 }
