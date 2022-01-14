@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis&family=Homemade+Apple&display=swap");
+body {
+  font-family: "Dosis", sans-serif;
+  background-color: #f3f1f7;
+}
 .spcontainer {
   display: flex;
   justify-content: center;
@@ -9,5 +15,32 @@
   height: 45px;
   color: white;
   font-size: larger;
-  width: 70%;
+  width: 50%;
+  font-family: "Dosis", sans-serif;
+  box-shadow: 0 0 6px 2px black;
+  border: 2px solid black;
+}
+
+h1 {
+  font-family: "Homemade Apple", cursive;
+  color: #03a9f4;
+}
+.PostInList {
+  min-width: fit-content;
+  font-size: 24px;
+  border: 1px solid rgb(209, 209, 209);
+}
+.Post-Container {
+  width: 50%;
+  margin-top: 20px;
+  border: 2px solid black;
+  box-shadow: 0 0px 6px 2px black;
+}
+
+.PostForm {
+  display: flex;
+  justify-content: center;
+}
+p {
+  margin-left: 20px;
 }
