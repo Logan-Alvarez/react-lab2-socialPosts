@@ -4,12 +4,13 @@ import modal from "react-modal";
 
 interface Props {
   onSubmit: (post: Post) => void;
+  onClose: () => void;
 }
 
-function PostForm({ onSubmit }: Props) {
+function PostForm({ onSubmit, onClose }: Props) {
   const [title, setTitle] = useState("");
   const [thought, setThought] = useState("");
-  const [hidden, setHidden] = useState(false);
+  const [close, setOnClose] = useState(false);
 
   function handleFormSubmit(e: FormEvent) {
     e.preventDefault();
@@ -19,6 +20,8 @@ function PostForm({ onSubmit }: Props) {
       thought: thought,
     };
     onSubmit(newPost);
+    setTitle("");
+    setThought("");
   }
 
   return (
@@ -32,6 +35,7 @@ function PostForm({ onSubmit }: Props) {
             fill="currentColor"
             className="bi bi-trash-fill"
             viewBox="0 0 16 16"
+            onClick={onClose}
           >
             <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
           </svg>
@@ -48,14 +52,15 @@ function PostForm({ onSubmit }: Props) {
         <textarea
           name=""
           id="thought"
+          placeholder="Thoughts..."
           cols={30}
           rows={10}
           value={thought}
           onChange={(e) => setThought(e.target.value)}
         ></textarea>
-        <p>
+        <span>
           <button type="submit">Add Post</button>
-        </p>
+        </span>
       </form>
     </div>
   );

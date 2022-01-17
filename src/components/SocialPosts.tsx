@@ -13,6 +13,10 @@ function SocialPosts() {
 
   const [hidden, setHidden] = useState<boolean>(false);
 
+  function handleDeletePost(index: number) {
+    setPost((prev) => [...prev.slice(0, index), ...prev.slice(index + 1)]);
+  }
+
   function handlePostFormSubmit(post: Post) {
     setPost((prev) => [...posts, post]);
   }
@@ -25,11 +29,20 @@ function SocialPosts() {
       </button>
       <div className="Post-Container">
         {posts.map((post, i) => (
-          <PostInList key={i} post={post} />
+          <PostInList
+            key={i}
+            post={post}
+            onDelete={() => handleDeletePost(i)}
+          />
         ))}
       </div>
       <div className="opacityDiv"></div>
-      {hidden ? <PostForm onSubmit={handlePostFormSubmit} /> : null}
+      {hidden ? (
+        <PostForm
+          onSubmit={handlePostFormSubmit}
+          onClose={() => setHidden(false)}
+        />
+      ) : null}
     </div>
   );
 }
