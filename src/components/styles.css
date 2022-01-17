@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dosis&family=Homemade+Apple&display=swap");
+/*REAFACTOR STYLES LATER*/
+
 body {
   font-family: "Dosis", sans-serif;
   background-color: #f3f1f7;
 }
+
 .spcontainer {
   display: flex;
   justify-content: center;
@@ -11,6 +14,13 @@ body {
   flex-direction: column;
   height: 100vh;
   width: 100vw;
+}
+.modalShade {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: black;
+  opacity: 80%;
 }
 .newThought {
   background-color: #03a9f4;
@@ -31,6 +41,10 @@ h1 {
   min-width: fit-content;
   font-size: 24px;
   border: 1px solid rgb(209, 209, 209);
+}
+
+.PostInList p {
+  margin: 5px;
 }
 
 .Post-Container {
@@ -75,6 +89,12 @@ p {
 }
 
 .trashCan {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.exitBtn {
   width: 100%;
   display: flex;
   justify-content: flex-end;

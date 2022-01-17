@@ -36,7 +36,7 @@ function SocialPosts() {
           />
         ))}
       </div>
-      <div className="opacityDiv"></div>
+      <div className={hidden ? "modalShade" : "random"}></div>
       {hidden ? (
         <PostForm
           onSubmit={handlePostFormSubmit}
