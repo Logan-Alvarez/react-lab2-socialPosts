@@ -9,7 +9,7 @@ interface postProp {
 function PostInList({ post, onDelete }: postProp) {
   return (
     <div className="PostInList">
-      <p>{post.title}</p>
+      <h2 className="postTitle">{post.title}</h2>
       <span className="trashCan">
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -19,6 +19,7 @@ function SocialPosts() {
 
   function handlePostFormSubmit(post: Post) {
     setPost((prev) => [...posts, post]);
+    setHidden(false);
   }
 
   return (

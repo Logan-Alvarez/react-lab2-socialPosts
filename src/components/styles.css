@@ -37,6 +37,10 @@ h1 {
   font-family: "Homemade Apple", cursive;
   color: #03a9f4;
 }
+.postTitle {
+  font-family: "Dosis", sans-serif;
+  margin: 2px 3px;
+}
 .PostInList {
   min-width: fit-content;
   font-size: 24px;
