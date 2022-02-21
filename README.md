@@ -1,46 +1,30 @@
-# Getting Started with Create React App
+The Social Post app project was created to learn how to handle form input and use the .map method in React.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+FUNCTIONALITY: Allow the user to add or delete thought entries to the e-journal.
 
-## Available Scripts
 
-In the project directory, you can run:
+Contributions: Logan A.
 
-### `npm start`
+SOCIAL POSTS FILE: The social posts file is what displays first on the load of the application. Here the user can see the name of the application, a button to add new thoughts,
+and pre-loaded entries. Within the file also sits the PostForm and PostInList components to handle the data. The data for the pre-loaded posts are hard coded and stored with a 
+hook variable. In the return we can map through the array of posts. The .map method in this example allows us to create a PostInList component for each post
+in the array.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+POST IN LIST FILE:  In the SocialPosts File we pass a prop of post to the PostInList file. Now we can break down how we want to display the post since the data now lives in our
+file. We display the data in JSX tags (still HTML tags ) and apply styles to them using CSS like normal.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+POST FORM FILE: The PostForm file, as you could have guessed it, holds the form. The forms function is to take the input from the user (title & thought) and add it the array so
+that a post can be created and displayed. The first thing we need to do to collect the input data is create hooks to hold it in a variable. Next for the input fields we need to
+add value and onChange attributes. The value attribute needs to hold the varible that corresponds with the input. (Title input needs the value of the title variable ). Next we set
+the onChange to update the varible once the input gets data from the user in real time. 
 
-### `npm test`
+In order to submit the form we need to set up a function of onSubmit. The onSubmit function is passed as a prop from SocialPost. The onSubmit needs a parameter of a post so that
+it has something to submit later. The next step is setting up a function that the onSubmit can handle (handleFromSubmit). In the handleFromSubmit I created newPost variable with
+the type of Post. That allows me to set the title and thoughts to the values of the matching hook variables. In the same handleFormSubmit function I call the onSubmit function and
+give it the newPost variable.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Back in the PostInList file we make handlePostFormSubmit function that has a parameter of post. In this function we can add the post to the array using the spread opperator
+because React has immutable arrays. Now we pass this function to the onSubmit prop. 
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+EXTRAS: The submission form for a new post is set up as a Modal. I set a hook with a variable of hidden with a useState of true. I then set a ternary if statement to only display
+the form if the hidden is set to false. The New Thought button uses the setHidden function to change the variable to false and the addPost button changes the varible back to true.
