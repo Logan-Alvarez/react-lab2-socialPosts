@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dosis&family=Homemade+Apple&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 /*REAFACTOR STYLES LATER*/
 
 body {
@@ -31,6 +32,11 @@ body {
   font-family: "Dosis", sans-serif;
   box-shadow: 0 0 6px 2px black;
   border: 2px solid black;
+}
+
+.newThought:hover {
+  transform: scale(1.01);
+  cursor: pointer;
 }
 
 h1 {
@@ -92,10 +98,12 @@ p {
   box-shadow: 0 0px 6px 2px black;
 }
 
-.trashCan {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
+.bi {
+  float: right;
+}
+
+.bi:hover {
+  cursor: pointer;
 }
 
 .exitBtn {
@@ -103,6 +111,10 @@ p {
   display: flex;
   justify-content: flex-end;
   margin-top: 4%;
+}
+
+.exitBtn:hover {
+  cursor: pointer;
 }
 
 button[type="submit"] {
@@ -113,4 +125,9 @@ button[type="submit"] {
   font-size: x-large;
   border: 1px solid black;
   box-shadow: 0 0px 6px 2px black;
+}
+
+button[type="submit"]:hover {
+  transform: scale(1.01);
+  cursor: pointer;
 }
