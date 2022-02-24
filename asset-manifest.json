@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-lab2-socialPosts/static/css/main.499f120a.css",
+    "main.js": "/react-lab2-socialPosts/static/js/main.642ce7bc.js",
+    "static/js/787.d7ea9ca0.chunk.js": "/react-lab2-socialPosts/static/js/787.d7ea9ca0.chunk.js",
+    "index.html": "/react-lab2-socialPosts/index.html",
+    "main.499f120a.css.map": "/react-lab2-socialPosts/static/css/main.499f120a.css.map",
+    "main.642ce7bc.js.map": "/react-lab2-socialPosts/static/js/main.642ce7bc.js.map",
+    "787.d7ea9ca0.chunk.js.map": "/react-lab2-socialPosts/static/js/787.d7ea9ca0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.499f120a.css",
+    "static/js/main.642ce7bc.js"
+  ]
+}
